@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="./all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,8 +15,15 @@
 </head>
 <body>
     
-<div id="left_bg"> </div>
-<div id="right_bg"> </div>
+<div id="left_bg"> 
+    <div class="left__over"> </div>
+</div>
+
+<div id="right_bg">
+    <div class="right__over">
+
+    </div>
+ </div>
 
 <div id="nav">
     <div id="logo">
@@ -43,9 +53,13 @@
 
 <div id="content">
     <!-- <h3> Discover Tesla</h3> -->
-    <a href="Test Drive"> Test drive</a>
-    <!-- <p>  test drive  visit a store</p> -->
-    <a href=""> Visit a store </a>
+    <!-- <ul> -->
+            <a  href="https://www.tesla.com/en_GB/drive"> Test drive</a>
+            <!-- <p>  test drive </p> -->
+            <a href="https://www.tesla.com/en_GB/findus?bounds=59.799508351777426%2C-42.137696500000004%2C12.294881334148652%2C-156.395509&zoom=5&filters=store%2Cservice%2Csupercharger%2Cdestination%20charger"> Visit a store </a>
+
+    <!-- </ul> -->
+   
 </div>
 <div id="heading">
     <h1> 
@@ -72,10 +86,74 @@
     </h1>
 </div>
 
+<div id="navigator">
+    <i class='fas fa-arrow-right'> </i>
+</div>
 
 
+<script> 
+
+    gsap.from('.left__over, .right__over', {
+        duration: .1,
+        bottom: '100%',
+        onComplete: function(){
+            gsap.to('.left__over, .right__over',{
+                duration: 9.1,
+                top: '100%',
+                delay: .1,
+                stagger: .2
+            })
+        }
+    })
+
+    gsap.from('#left_bg, #right_bg',{
+        duration: .3,
+        scale: 1.3,
+        delay: 1.3
+    })
+
+    gsap.from('#nav', {
+        duration: 1.9,
+        top: 0,
+        opacity: 0,
+        delay: 1.5
+    })
+ 
+    gsap.from('#heading', {
+        duration: 2.5,
+        top:0,
+        opacity:0,
+        delay: 3.1
+    })
+
+    gsap.from('#content',  {
+        duration: 1.1,
+        botto: '4%',
+        opacity: 0,
+        delay: 4.5
+
+    })
+    gsap.from('#content a',  {
+        duration: 1.5,
+        botto: '4%',
+        opacity: 0,
+        delay: 4.9
+
+    })
+
+    gsap.from('span', {
+        duration: .5,
+        fontSize: 2,
+        top:5,
+        opacity: 0,
+        delay: 2.3,
+        scale:0.1,
+        stagger: .1
+
+    })
 
 
+</script>
 
 
 

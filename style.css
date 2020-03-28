@@ -1,5 +1,6 @@
 *{
     width: 100vw;
+    /* height: 100vh; */
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -109,7 +110,7 @@ ul {
     justify-content: space-between; 
 
 }
-#content a {
+#content a{
     /* : none; */
     text-decoration: none;
     padding: 15px;
@@ -133,3 +134,20 @@ span {
     text-align: center;
 
 }
+
+#navigator {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    color: white;
+}
+
+.left__over, .right__over{
+    width: 100%;
+    height: 100%;
+    background: #f70000;
+    z-index: 1;
+    position: relative;
+}
+
+/* gsap.from('') */
