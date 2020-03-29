@@ -21,7 +21,7 @@ html, body {
     position: absolute;
     top:0;
     left: 30%;
-    width: 80%;
+    width: 75%;
     height: 100vh;
     background-image: url(./imgs/2020_tesla_roadster_4k_6-HD.jpg);
     background-size: cover;
@@ -32,7 +32,7 @@ html, body {
     z-index: -1;
 }
 
-#left_bg{
+#logo_bg{
     position: absolute;
     top:0;
     left: 0%;
